@@ -21,5 +21,19 @@
   "bugs": {
     "url": "https://github.com/igorilic/blogMean/issues"
   },
-  "homepage": "https://github.com/igorilic/blogMean#readme"
+  "homepage": "https://github.com/igorilic/blogMean#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-if": "^2.0.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^1.12.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-print": "^2.0.1",
+    "gulp-util": "^3.0.7",
+    "jshint-stylish": "^2.0.1",
+    "yargs": "^3.29.0"
+  }
 }
