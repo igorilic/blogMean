@@ -1,0 +1,25 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Simple blog app",
+  "main": "src/server/app.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorilic/blogMean.git"
+  },
+  "keywords": [
+    "blog",
+    "angularjs",
+    "express",
+    "mongoose"
+  ],
+  "author": "Igor Ilic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorilic/blogMean/issues"
+  },
+  "homepage": "https://github.com/igorilic/blogMean#readme"
+}
