@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "description": "Simple blog app",
+  "main": "src/server/app.js",
+  "authors": [
+    "Igor Ilic"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "blog",
+    "angularjs",
+    "express",
+    "mongoose"
+  ],
+  "homepage": "https://github.com/igorilic/blogMean",
+  "moduleType": [],
+  "dependencies": {
+    "angular-material": "~0.11.4",
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-aria": "~1.4.7",
+    "angular-animate": "~1.4.7"
+  }
+}

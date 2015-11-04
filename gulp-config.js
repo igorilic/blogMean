@@ -12,7 +12,7 @@ module.exports = function() {
 		 */
 		js: [
 			'./src/**/*.js',
-			'./*js'
+			'./*.js'
 		],
 		
 		/**
