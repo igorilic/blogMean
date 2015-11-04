@@ -5,13 +5,14 @@
     .module('app')
     .controller('AppController', AppController);
 
-  AppController.$inject = ['$mdSidenav'];
-  function AppController($mdSidenav) {
+  // AppController.$inject = ['$mdSidenav'];
+  function AppController() {
     var vm = this;
+    vm.title = 'testic';
     
-    vm.toggleSidenav = function(menuId) {
-      $mdSidenav(menuId).toggle();
-    };
+    // vm.toggleSidenav = function(menuId) {
+    //   $mdSidenav(menuId).toggle();
+    // };
 
     activate();
 
