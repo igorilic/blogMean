@@ -33,6 +33,7 @@ module.exports = function() {
 		client: client,
 		server: server,
 		clientApp: clientApp,
+		style: client + 'style/**/*.css',
 		
 		/**
 		 * bower / wiredep config
@@ -46,7 +47,7 @@ module.exports = function() {
 		/**
          * Node settings
          */
-        defaultPort: 7203,
+        defaultPort: 7506,
         nodeServer: './src/server/app.js',
 		browserReloadDelay: 1000
 		

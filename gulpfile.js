@@ -8,7 +8,7 @@ var $ = require('gulp-load-plugins')({lazy: true});
 
 var config = require('./gulp-config')();
 
-var port = process.env.PORT || config.defaultPort;
+var port = process.env.PORT;
 
 
 /**
@@ -66,9 +66,9 @@ function serve(isDev /*, specRunner */) {
         delayTime: 1,
         env: {
             'PORT': port,
-            'NODE_ENV': isDev ? 'dev' : 'build'
+            'NODE_ENV': isDev ? 'development' : 'build'
         },
-        watch: [config.server, config.html]
+        watch: [config.server]
     };
 
     return $.nodemon(nodeOptions)
@@ -120,7 +120,7 @@ function startBrowserSync(isDev /*, specRunner */) {
         gulp.watch([config.html, config.js, config.css])
             .on('change', function(event) { changeEvent(event); });
     } else {
-        gulp.watch([/*config.less, */config.js, config.html], [browserSync.reload])
+        gulp.watch(config.js, [browserSync.reload])
             .on('change', function(event) { changeEvent(event); });
     }
 
@@ -129,8 +129,7 @@ function startBrowserSync(isDev /*, specRunner */) {
         port: 3000,
         files: isDev ? [
             config.client + '**/*.*',
-            '!' + config.less,
-            config.temp + '**/*.css'
+            config.style + '**/*.css'
         ] : [],
         ghostMode: {
             clicks: true,
@@ -145,10 +144,6 @@ function startBrowserSync(isDev /*, specRunner */) {
         notify: true,
         reloadDelay: 0 //1000
     };
-    // if (specRunner) {
-    //     options.startPath = config.specRunnerFile;
-    // }
-
     browserSync(options);
 }
 
